@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curd For Stormin</title>
+    <link rel="icon" href="/imges/Untitled-2.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;600;800&family=Open+Sans:ital,wght@0,300;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="curd">
+      <div class="head">
+        <img src="/imges/logo.png" alt="" />
+        <h1>Storming</h1>
+        <p class="mainp">Work Mangagement System</p>
+      </div>
+
+      <div class="inputs">
+        <input type="text" id="user" placeholder="Enter your name" />
+        <div class="price-website">
+          <input type="text" id="website" placeholder="Website" />
+          <input type="text" placeholder="Client-Name" id="clientName" />
+          <input type="number" placeholder="Price" id="price" />
+        </div>
+        <div class="disc">
+          <input type="text" placeholder="Description" id="desc" />
+        </div>
+        <button id="btn-submit">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="search">
+          <input
+            onkeyup="searchData(this.value)"
+            type="text"
+            placeholder="Search"
+            id="search"
+          />
+        </div>
+        <div class="btnsearch">
+          <button onclick="getThesearchMode(this.id)" id="btn-searchWebsite">
+            Search By Website-Name
+          </button>
+          <button onclick="getThesearchMode(this.id)" id="btn-searchClient">
+            Search By Client-Name
+          </button>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Website</th>
+            <th>Client-Name</th>
+            <th>Descraption</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
